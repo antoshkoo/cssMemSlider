@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+body {
+  background-color: gray;
+  color: #fff;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+h1 {
+  font-size: 3rem;
+}
+.container {
+  width: 70rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* border: 1px solid #ccc;
+  border-radius: 10px ; */
+  overflow: hidden;
+}
+
+input {
+  position: absolute;
+  visibility: hidden;
+}
+.slider_image {
+  display: flex;
+  width: 400%;
+}
+
+.slider_image div {
+  width: 100%;
+  height: 50rem;
+}
+.slider_text {
+  max-width: 70%;
+  padding: 2rem 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.slider_text span {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  width: 70rem;
+}
+
+#r1:checked ~ .slider_image .s1,
+#r1:checked ~ .slider_text .s1 {
+  margin-left: 0;
+  transition: all 0.5s ease;
+}
+#r2:checked ~ .slider_image .s1,
+#r2:checked ~ .slider_text .s1 {
+  margin-left: -70rem;
+  transition: all 0.5s ease;
+}
+#r3:checked ~ .slider_image .s1,
+#r3:checked ~ .slider_text .s1 {
+  margin-left: -140rem;
+  transition: all 0.5s ease;
+}
+#r4:checked ~ .slider_image .s1,
+#r4:checked ~ .slider_text .s1 {
+  margin-left: -210rem;
+  transition: all 0.5s ease;
+}
+
+#r1:checked ~ .slider_bullet .s1 span {
+  border-color: tomato;
+}
+#r2:checked ~ .slider_bullet .s2 span {
+  border-color: tomato;
+}
+#r3:checked ~ .slider_bullet .s3 span {
+  border-color: tomato;
+}
+#r4:checked ~ .slider_bullet .s4 span {
+  border-color: tomato;
+}
+label {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+label span {
+  display: inline-block;
+  margin: 0.25rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  cursor: pointer;
+  background-color: rgb(102, 102, 231);
+  border: 2px solid gray;
+  border-radius: 50%;
+}
+label:hover span {
+  background-color: #fff;
+  border: 2px solid rgb(102, 102, 231);
+}
+label span:active {
+  background-color: #fff;
+  border: 2px solid black;
+}
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+    width: 40rem;
+    align-items: unset;
+  }
+  .slider_bullet {
+    width: 100%;
+    padding: 2rem 0 0;
+    text-align: center;
+  }
+  .slider_image div {
+    width: 40rem;
+    height: unset;
+  }
+  img {
+    width: 40rem;
+  }
+  .slider_text {
+    order: 1;
+  }
+  .slider_text span {
+    width: 40rem;
+  }
+  #r2:checked ~ .slider_image .s1,
+  #r2:checked ~ .slider_text .s1 {
+    margin-left: -40rem;
+    transition: all 0.5s ease;
+  }
+  #r3:checked ~ .slider_image .s1,
+  #r3:checked ~ .slider_text .s1 {
+    margin-left: -80rem;
+    transition: all 0.5s ease;
+  }
+  #r4:checked ~ .slider_image .s1,
+  #r4:checked ~ .slider_text .s1 {
+    margin-left: -120rem;
+    transition: all 0.5s ease;
+  }
+}
