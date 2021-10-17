@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 50px;
+  gap: 5rem;
 }
 h1 {
   font-size: 3rem;
@@ -45,7 +45,7 @@ input {
 }
 .slider_text {
   max-width: 70%;
-  padding: 20px 0;
+  padding: 2rem 0;
   display: flex;
   overflow: hidden;
 }
@@ -56,7 +56,10 @@ input {
   font-size: 1.5rem;
   width: 70rem;
 }
-
+.slider_bullet {
+  display: flex;
+  align-items: center;
+}
 #r1:checked ~ .slider_image .s1,
 #r1:checked ~ .slider_text .s1 {
   margin-left: 0;
@@ -92,16 +95,16 @@ input {
 }
 label {
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 2.5rem;
+  height: 2.5rem;
   text-align: center;
   cursor: pointer;
 }
 label span {
   display: inline-block;
-  margin: 2.5px;
-  width: 17px;
-  height: 17px;
+  margin: 0.25rem;
+  width: 1.7rem;
+  height: 1.7rem;
   cursor: pointer;
   background-color: rgb(102, 102, 231);
   border: 2px solid gray;
@@ -123,7 +126,7 @@ label span:active {
   }
   .slider_bullet {
     width: 100%;
-    padding: 20px 0 0;
+    padding: 2rem 0 0;
     text-align: center;
   }
   .slider_image div {
