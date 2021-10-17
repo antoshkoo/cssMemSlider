@@ -56,10 +56,7 @@ input {
   font-size: 1.5rem;
   width: 70rem;
 }
-.slider_bullet {
-  display: flex;
-  align-items: center;
-}
+
 #r1:checked ~ .slider_image .s1,
 #r1:checked ~ .slider_text .s1 {
   margin-left: 0;
